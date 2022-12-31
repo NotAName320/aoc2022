@@ -16,7 +16,7 @@ def main():
         line = line.replace('move ', '').replace('from ', '').replace('to ', '').split()  # lol
         line = [int(x) for x in line]  # younger me wouldve combined this with the last line but idrc anymore
         for i in range(line[0]):
-            stacks[line[2]-1].append(stacks[line[1]-1].pop())
+            stacks[line[2] - 1].append(stacks[line[1] - 1].pop())
 
     print(''.join([x[-1] for x in stacks if x[-1] != ' ']))
 

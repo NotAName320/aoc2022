@@ -19,7 +19,7 @@ def main():
             case 'dir', _: pass
             case size, _:
                 for i in range(len(current_dir)):
-                    dirs_size['/'.join(current_dir[:i+1])] += int(size)
+                    dirs_size['/'.join(current_dir[:i + 1])] += int(size)
     would_save_enough = [x for x in dirs_size.values() if dirs_size[''] - 40000000 <= x]
     print(min(would_save_enough))
 

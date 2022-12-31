@@ -17,8 +17,8 @@ def main():
         line = [int(x) for x in line]  # younger me wouldve combined this with the last line but idrc anymore
         moved_crates = []
         for i in range(line[0]):
-            moved_crates.insert(0, stacks[line[1]-1].pop())
-        stacks[line[2]-1] += moved_crates
+            moved_crates.insert(0, stacks[line[1] - 1].pop())
+        stacks[line[2] - 1] += moved_crates
 
     print(''.join([x[-1] for x in stacks if x[-1] != ' ']))
 
