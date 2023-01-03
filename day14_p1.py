@@ -1,7 +1,7 @@
 def main():
     file_lines = open('day14_input.txt', 'r').readlines()
 
-    rocks = set()  # could probably just make this set and sands into the same thing but i think having them separate is cleaner and makes me look better lol
+    rocks = set()
 
     for line in file_lines:  # create map of rocks using a set
         line = [(x.split(',')) for x in line.strip().split(' -> ')]  # real fucked up string shit
