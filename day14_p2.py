@@ -22,12 +22,12 @@ def main():
         while True:
             if sand_loc.imag >= lowest_rock + 1:
                 break
-            if sand_loc + 1j not in sand_rocks:  # check immediately below
-                sand_loc += 1j
-            elif sand_loc + 1j - 1 not in sand_rocks:  # check left
-                sand_loc += 1j - 1
-            elif sand_loc + 1j + 1 not in sand_rocks:  # check right
-                sand_loc += 1j + 1
+            if (check_loc := sand_loc + 1j) not in sand_rocks:  # check immediately below
+                sand_loc = check_loc
+            elif (check_loc := sand_loc - 1 + 1j) not in sand_rocks:  # check left
+                sand_loc = check_loc
+            elif (check_loc := sand_loc + 1 + 1j) not in sand_rocks:  # check right
+                sand_loc = check_loc
             else:
                 break
         sand_rocks.add(sand_loc)
