@@ -1,7 +1,7 @@
 def main():
     file_lines = open('day1_input.txt', 'r').readlines()
 
-    most, curr_sum = 0
+    most, curr_sum = 0, 0
 
     for line in file_lines:
         line = line.strip()
